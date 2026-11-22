@@ -1,0 +1,20 @@
+Discord Plus
+Fork of the "discord" plugin v0.0.6 from claude-plugins-official (Anthropic),
+licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Changes from the original (2026-11-22):
+- Renamed the plugin to "discord-plus" (package claude-channel-discord-plus). State dir moved to
+  ~/.claude/channels/discord-plus/ so it does not clash with the official plugin. Skill references
+  changed to /discord-plus:access and /discord-plus:configure.
+- Channel, pairing and access-control logic unchanged.
+- Added plus/ with 39 extra MCP tools (messages, members, server structure, webhooks, events,
+  invites, audit log, presence, DMs to server members), an owner/admin gate for admin tools
+  (owner id plus DISCORD_ADMIN_IDS), and an admin audit log (<state dir>/admin-audit.log).
+- Added DM contacts: people the owner or an admin had the bot DM can reply to it without being added
+  to the allowlist. Failed sends are reported to the owner.
+- server.ts: small hooks only, each marked with a "discord-plus" comment: import, tool list, tool
+  dispatch, MCP instructions, plus init, offering DMs to the contact handler before the unchanged
+  gate, and noting the sender of each delivered message.
+- Added tests/ (offline tests), .claude-plugin/marketplace.json (local marketplace), .gitignore.
+- README.md rewritten for the fork.
+- v0.3.0: DISCORD_OWNER_ID is required (no built-in owner); fail closed without it.

@@ -1,0 +1,11 @@
+{
+  "name": "discord-plus",
+  "description": "Discord channel for Claude Code with full bot access (fork of the official discord plugin) \u2014 messaging bridge with built-in access control. Manage pairing, allowlists, and policy via /discord-plus:access.",
+  "version": "0.3.0",
+  "keywords": [
+    "discord",
+    "messaging",
+    "channel",
+    "mcp"
+  ]
+}

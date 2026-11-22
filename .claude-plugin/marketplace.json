@@ -1,0 +1,12 @@
+{
+  "name": "discord-plus-local",
+  "owner": { "name": "skyexplorewt" },
+  "plugins": [
+    {
+      "name": "discord-plus",
+      "source": "./",
+      "description": "Discord channel for Claude Code with full bot access (members, channels, roles, webhooks, events, invites, audit log, DMs). Admin tools are limited to the owner and admins, and logged.",
+      "version": "0.3.0"
+    }
+  ]
+}
